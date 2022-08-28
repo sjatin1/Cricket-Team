@@ -11,11 +11,11 @@ class NameComparator implements Comparator<Data1>{
 	}
 }
 
-/*class AvgComp implements Comparator<Data1>{
+class AvgComp implements Comparator<Data1>{
 	public int compare(Data1 d1, Data1 d2) {
-		return d1.getAvg_score().compareTo(d2.getAvg_score());
+		return (int) (d2.getAvg_score()-d1.getAvg_score());
 	}
-}*/
+}
 
 public class Data1 implements Comparable<Data1>{
 	public int id;

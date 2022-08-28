@@ -110,7 +110,7 @@ public class Code1 {
 				PlayerTypeNotFoundException ptnfe = new PlayerTypeNotFoundException("Player type not found in given 20 players ");
 				throw(ptnfe);
 			}
-			Collections.sort(data,Comparator.comparingDouble(Data1::getAvg_score));
+			Collections.sort(data,new NameComparator());
 			for(int j=1; j<=bowler;j++) {
 				//data.forEach((d)->System.out.println("Player_Type : "+ d.player_type+" Name : "+d.name+" Matches Played : "+d.matches_played+" Runs : "+d.runs+" Wickets : "+d.wickets+" Out On Zero : "+d.out_on_zero+" Average Score :"+d.avg_score));
 				Iterator<Data1> itrr = temp.iterator();
@@ -124,7 +124,7 @@ public class Code1 {
 				}
 			
 			}
-			Collections.sort(data,Comparator.comparingDouble(Data1::getAvg_score));
+			Collections.sort(data,new AvgComp());
 			Iterator<Data1> itr2 = temp.iterator();
 			int rem = 11-bowler;
 			while(itr2.hasNext()) {
@@ -136,11 +136,18 @@ public class Code1 {
 				}
 				
 			}
-			Collections.sort(temp,new NameComparator());
+			/*Collections.sort(temp,new NameComparator());
 			Iterator<Data1> itr4 = final_team.iterator();
 			while(itr4.hasNext()) {
 				Data1 dat4 = itr4.next();
-				System.out.println("Id : "+ dat4.getId()+" Name : "+dat4.getName()+" Player Type : "+dat4.getPlayer_type()+" Matches Played : "+dat4.getMatches_played()+ " Runs : "+dat4.getRuns()+ " Wickets : "+dat4.getWickets()+" Out on Zero : "+dat4.getOut_on_zero()+" Average Score : "+dat4.getAvg_score());
+				//System.out.println("Id : "+ dat4.getId()+" Name : "+dat4.getName()+" Player Type : "+dat4.getPlayer_type()+" Matches Played : "+dat4.getMatches_played()+ " Runs : "+dat4.getRuns()+ " Wickets : "+dat4.getWickets()+" Out on Zero : "+dat4.getOut_on_zero()+" Average Score : "+dat4.getAvg_score());
+				//System.out.println(" ");
+			}*/
+			Collections.sort(data,new NameComparator());
+			Iterator<Data1> itr5 = final_team.iterator();
+			while(itr5.hasNext()) {
+				Data1 datf = itr5.next();
+				System.out.println(" Name : "+datf.getName()+" Id : "+ datf.getId()+" Player Type : "+datf.getPlayer_type()+" Matches Played : "+datf.getMatches_played()+ " Runs : "+datf.getRuns()+ " Wickets : "+datf.getWickets()+" Out on Zero : "+datf.getOut_on_zero()+" Average Score : "+datf.getAvg_score());
 				System.out.println(" ");
 			}
 			break;
