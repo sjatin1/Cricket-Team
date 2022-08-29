@@ -24,7 +24,7 @@ public class Code1 {
 		menu=sc.nextInt();
 		switch(menu) {
 		case 1 :
-		
+			Collections.sort(data,new NameComparator());
 			if((cnt>=3) && (flag<=1)) {
 			data.forEach((d)->System.out.println("Player_Type : "+ d.player_type+" Name : "+d.name+" Matches Played : "+d.matches_played+" Runs : "+d.runs+" Wickets : "+d.wickets+" Out On Zero : "+d.out_on_zero+" Average Score :"+d.avg_score));
 			}
@@ -60,28 +60,33 @@ public class Code1 {
 							int mp = sc.nextInt();
 							d.setMatches_played(mp);
 							d.setAvg_score(runs/mp);
+							System.out.println("Matches Updated Successfully");
 							break;
 						case 2 :
 							System.out.println("enter the updated runs");
 							int rs = sc.nextInt();
 							d.setRuns(rs);
 							d.setAvg_score(rs/matches_played);
+							System.out.println("Runs updated Successfully");
 							break;
 						case 3 :
 							System.out.println("enter the updated wickets");
 							int ws = sc.nextInt();
 							d.setWickets(ws);
+							System.out.println("Wickets updated successfully");
 							break;
 						case 4 :
 							System.out.println("enter the updated out on zeroes");
 							int os = sc.nextInt();
 							d.setOut_on_zero(os);
+							System.out.println("Out on Zeroes updated successfully");
 							break;
 						case 5 :
 							x=false;
 							break;
 						default :
 							System.out.println("Choose a valid number to update");
+							System.out.println(" ");
 						}
 					}
 				 }
@@ -172,6 +177,8 @@ public class Code1 {
 						break;
 				case 4: player_type="allrounder";
 						break;
+				default: System.out.println("Player Type is batsman as the number does not match any above number");
+						 player_type="batsman";
 					
 				}
 				//player_type=sc.next();
@@ -203,6 +210,11 @@ public class Code1 {
 		case 5 :
 			run=false;
 			System.out.println("Exit");
+			break;
+			
+		default :
+			System.out.println("Enter valid number");
+			System.out.println(" ");
 			}	
 		}
 	
