@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Add Player</title>
+<style type="text/css">
+	h1{
+	background-color:grey;
+	};
+	
+</style>
+</head>
+<body bgcolor="lavender">
+<form action="AddPlayer" method="post">
+	<center>
+	<font color="black">
+		Enter Player ID <span style= "color:red">* </span> : <input type="text" name="id" required="required"><br><br>
+		Enter Player Name <span style= "color:red">* </span> : <input type="text" name="pname" required="required"><br><br>
+
+		Enter Matches Played <span  style= "color:red">* </span> : <input type="number" name="mp" required="required"><br><br>
+		Enter Runs <span  style= "color:red">* </span> : <input type="number" name="runs" required="required"><br><br>
+		Enter Wickets <span  style= "color:red">* </span> : <input type="number" name="wickets" required="required"><br><br>
+		
+		
+		Select Player Type <span style= "color:red">* </span> :
+		<input type="radio"  name="type" value="Batsman" required="required">Batsman &nbsp;&nbsp;
+		<input type="radio"  name="type" value="Bowler" required="required">Bowler &nbsp;&nbsp;
+		<input type="radio"  name="type" value="ALLRounder" required="required">Allrounder &nbsp;&nbsp;
+		<input type="radio"  name="type" value="WicketKepper" required="required">WicketKeeper &nbsp;&nbsp;
+		<br><br>
+		
+		
+		
+		Out On Zero <span style= "color:red">* </span> : <input type="number" name="oz" required="required"><br><br>
+	
+		<input type="submit" value="confirm">
+		</font>
+	</center>
+</form>
+</body>
+</html>

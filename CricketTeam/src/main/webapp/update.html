@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Data Updation</title>
+</head>
+<body>
+<form action="UpdateByName" method="post">
+<center>
+	<h1 align="center">Update details</h1>
+	Name : <input type = "text" name = "pname"><br><br>
+	Select Type of the data to update <span style= "color:red">* </span> : <select name="dat_type">
+			<option value="" >Select type</option>
+			<option value="matches_played" >Matches Played </option>
+			<option value="runs" >Runs </option>
+			<option value="wickets" > Wickets </option>
+			<option value="out_on_zero">Out On Zero </option>
+		</select><br><br>
+		
+	Updated data : <input type ="number" name ="data"><br><br>
+	
+		<input type="submit" value ="confirm"><br><br>
+	</center>
+	</form>
+
+</body>
+</html>
